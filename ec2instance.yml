@@ -8,11 +8,11 @@
    
    vars: 
       instance_type: t2.micro
-	  security_group: webservers
-	  image: ami-0d2692b6acea72ee6
-	  region: ap-south-b
-	  keypair: mumbai 
-	  count: 1
+	security_group: webservers
+	image: ami-0d2692b6acea72ee6
+	region: ap-south-b
+	keypair: mumbai 
+	count: 1
 	  
 	  
    tasks:

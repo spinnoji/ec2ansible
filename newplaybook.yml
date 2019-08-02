@@ -1,0 +1,17 @@
+---
+- name: ec2launcher
+  hosts: localhost
+  connection: local
+  tasks:
+   - ec2:
+      instance_type: t2.micro
+      key_name: mumbai
+      image: ami-0d2692b6acea72ee6
+      region: up-south-b
+      group: default
+      count: 1
+      vpc_subnet_id: subnet-71058c3d
+      wait: yes
+      assign_public_ip: yes
+      group: default
+      instance_tags:

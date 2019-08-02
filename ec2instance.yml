@@ -13,7 +13,7 @@
      region: ap-south-b
      keypair: mumbai
      count: 1
-	  
+     
    tasks:
 
       - name: Create new scurity group with below given name

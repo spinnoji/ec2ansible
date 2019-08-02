@@ -1,0 +1,42 @@
+---
+  -name: Provision of EC2 instance
+   hosts: localhost
+   connection: localhost
+   gather_facts: False
+   tags: provisioning
+   
+   
+   vars: 
+      instance_type: t2.micro
+	  security_group: webservers
+	  image: ami-0d2692b6acea72ee6
+	  region: ap-south-b
+	  keypair: mumbai 
+	  count: 1
+	  
+	  
+   tasks:
+
+      - name: Create new scurity group with below given name
+        local_action:
+            module: ec2_group
+            name: "{{ security_group }}"
+            description: Security Group for newly created EC2 instance		
+            region: "{{ region }}"
+            rules: 
+               -proto: tcp
+                from_port: 22
+                to_port: 22
+                cidr_ip: 0.0.0.0/0
+               -proto: tcp
+                from_port: 80
+                to_port: 80
+                cidr_ip: 0.0.0.0/0
+            rules_egress:
+               -proto: all
+              	cidr_ip: 0.0.0.0/0
+
+            name: Launch the new t2 micro EC2 instance 				
+	  
+	  
+  

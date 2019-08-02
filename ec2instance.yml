@@ -35,7 +35,4 @@
                -proto: all
               	cidr_ip: 0.0.0.0/0
 
-            name: Launch the new t2 micro EC2 instance 				
-	  
-	  
-  
+            name: Launch the new t2 micro EC2 instance

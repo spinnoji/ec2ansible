@@ -7,7 +7,7 @@
       instance_type: t2.micro
       key_name: mumbai
       image: ami-0d2692b6acea72ee6
-      region: up-south-b
+      region: ap-south-b
       group: default
       count: 1
       vpc_subnet_id: subnet-71058c3d

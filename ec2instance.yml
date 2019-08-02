@@ -13,8 +13,6 @@
   region: ap-south-b
   keypair: mumbai 
   count: 1
-	  
-	  
   tasks:
 
      - name: Create new scurity group with below given name
@@ -61,4 +59,4 @@
        tags:
           Name: Web server
           Owner: Srikanth
-			   Purpose: Testing EC2 instance from Ansible  
+          Purpose: Testing EC2 instance from Ansible
